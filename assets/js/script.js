@@ -9,23 +9,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createBoard() {
         const gameBoard = document.getElementById('game-board');
+        const symbolIndices = Array.from({ length: totalPairs }, (_, i) => i % symbols.length);
+        const shuffledIndices = shuffleArray(symbolIndices);
+
         for (let i = 0; i < totalPairs; i++) {
             const card = document.createElement('div');
             card.classList.add('card');
 
             const symbol = document.createElement('div');
             symbol.classList.add('symbol');
-            symbol.textContent = symbols[i % symbols.length];
+            symbol.textContent = symbols[shuffledIndices[i]];
 
             card.appendChild(symbol);
 
             card.addEventListener('click', flipCard);
             gameBoard.appendChild(card);
-            cards.push(card.cloneNode(true));
+            cards.push(card);
         }
-        cards = shuffle(cards);
-        countdown(1)
+
+        countdown(1);
     }
+
 
     function flipCard() {
         if (!isFlipping && flippedCards.length < 2 && !this.classList.contains('flipped')) {
@@ -47,12 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (symbol1 === symbol2) {
             card1.removeEventListener('click', flipCard);
             card2.removeEventListener('click', flipCard);
-            points = points + 20
             matchedPairs++;
 
-            if (matchedPairs === symbols.length) {
-                alert('Congratulations! You matched all pairs!');
-            }
         } else {
             card1.classList.remove('flipped');
             card2.classList.remove('flipped');
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         isFlipping = false;
     }
 
-    function shuffle(array) {
+    function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
@@ -70,23 +70,30 @@ document.addEventListener('DOMContentLoaded', function () {
         return array;
     }
 
+
     function countdown(minutes) {
         var seconds = 60;
-        var mins = minutes
+        var mins = minutes;
 
         function tick() {
             var counter = document.getElementById("counter");
-            var current_minutes = mins - 1
-            //seconds--;
-            counter.innerHTML = current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+            var current_minutes = mins - 1;
+
             if (seconds > 0) {
-                setTimeout(tick, 1000);
+                seconds--;
             } else {
-                if (mins > 1) {
-                    countdown(mins - 1);
-                }
+                alert('Fail');
+                return;
             }
+            if (matchedPairs === symbols.length && seconds > 0) {
+                alert('Congratulations! You matched all pairs!');
+                return
+            }
+
+            counter.innerHTML = "Timer:" + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+            setTimeout(tick, 1000);
         }
+
         tick();
     }
 
