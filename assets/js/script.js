@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let matchedPairs = 0;
     let isFlipping = false;
     let points = 0;
+    var pointsTracker = document.getElementById("points");
+    pointsTracker.innerHTML = "Points:" +  points;
 
     function createBoard() {
         const gameBoard = document.getElementById('game-board');
@@ -52,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
             card1.removeEventListener('click', flipCard);
             card2.removeEventListener('click', flipCard);
             matchedPairs++;
+            points = points + 20
+            pointsTracker.innerHTML = "Points:" +  points;
 
         } else {
             card1.classList.remove('flipped');
