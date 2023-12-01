@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let isFlipping = false;
     let points = 0;
     var pointsTracker = document.getElementById("points");
+    var modal = document.getElementById("myModal");
+    var returnButton = document.getElementById("returnButton")
+
     pointsTracker.innerHTML = "Points:" +  points;
 
     function createBoard() {
@@ -74,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return array;
     }
 
-
+    returnButton.onclick = function(){
+        console.log("Testar")
+    }
     function countdown(minutes) {
         var seconds = 60;
         var mins = minutes;
@@ -90,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             if (matchedPairs === symbols.length && seconds > 0) {
-                alert('Congratulations! You matched all pairs!');
+                modal.style.display = "block"
                 return
             }
 
