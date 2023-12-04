@@ -1,3 +1,4 @@
+var currentTotalPairs;
 document.addEventListener('DOMContentLoaded', function () {
     const symbols = ['🌟', '🌈', '🍕', '🚀', '🎈', '🐳', '🎉', '🍦'];
     const totalPairs = symbols.length * 2;
@@ -9,10 +10,85 @@ document.addEventListener('DOMContentLoaded', function () {
     var pointsTracker = document.getElementById("points");
     var modal = document.getElementById("myModal");
     var returnButton = document.getElementById("returnButton")
+    var nextButton = document.getElementById("nextButton")
+    var maxTotalPairs = 16;
 
-    pointsTracker.innerHTML = "Points:" +  points;
+    currentTotalPairs = totalPairs;
 
-    function createBoard() {
+    returnButton.onclick = function () {
+        console.log("Testar")
+    }
+    pointsTracker.innerHTML = "Points:" + points;
+
+    function checkMatch() {
+        const [card1, card2] = flippedCards;
+        const symbol1 = card1.querySelector('.symbol').textContent;
+        const symbol2 = card2.querySelector('.symbol').textContent;
+
+        if (symbol1 === symbol2) {
+            card1.removeEventListener('click', flipCard);
+            card2.removeEventListener('click', flipCard);
+            matchedPairs++;
+            points = points + 20
+            pointsTracker.innerHTML = "Points:" + points;
+
+        } else {
+            card1.classList.remove('flipped');
+            card2.classList.remove('flipped');
+        }
+
+        flippedCards = [];
+        isFlipping = false;
+    }
+
+    function countdown(minutes) {
+        var seconds = 60;
+        var mins = minutes;
+
+        function tick() {
+            var counter = document.getElementById("counter");
+            var current_minutes = mins - 1;
+
+            if (seconds > 0) {
+                seconds--;
+            } else {
+                alert('Fail');
+                return;
+            }
+            // matchedPairs = symbols.length
+            if (matchedPairs === symbols.length && seconds > 0) {
+                modal.style.display = "block"
+                return
+            }
+
+            counter.innerHTML = "Timer:" + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+            setTimeout(tick, 1000);
+        }
+
+        tick();
+    }
+
+    function flipCard() {
+        if (!isFlipping && flippedCards.length < 2 && !this.classList.contains('flipped')) {
+            this.classList.add('flipped');
+            flippedCards.push(this);
+
+            if (flippedCards.length === 2) {
+                isFlipping = true;
+                setTimeout(checkMatch, 1000);
+            }
+        }
+    }
+
+    var shuffleArray = function (array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
+
+    var createBoard = function (totalPairs) {
         const gameBoard = document.getElementById('game-board');
         const symbolIndices = Array.from({ length: totalPairs }, (_, i) => i % symbols.length);
         const shuffledIndices = shuffleArray(symbolIndices);
@@ -33,78 +109,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         countdown(1);
-    }
+    };
 
+    nextButton.onclick = function () {
+        if (currentTotalPairs < maxTotalPairs) {
+            currentTotalPairs += 2;
 
-    function flipCard() {
-        if (!isFlipping && flippedCards.length < 2 && !this.classList.contains('flipped')) {
-            this.classList.add('flipped');
-            flippedCards.push(this);
-
-            if (flippedCards.length === 2) {
-                isFlipping = true;
-                setTimeout(checkMatch, 1000);
-            }
-        }
-    }
-
-    function checkMatch() {
-        const [card1, card2] = flippedCards;
-        const symbol1 = card1.querySelector('.symbol').textContent;
-        const symbol2 = card2.querySelector('.symbol').textContent;
-
-        if (symbol1 === symbol2) {
-            card1.removeEventListener('click', flipCard);
-            card2.removeEventListener('click', flipCard);
-            matchedPairs++;
-            points = points + 20
-            pointsTracker.innerHTML = "Points:" +  points;
-
+            resetBoard(currentTotalPairs);
         } else {
-            card1.classList.remove('flipped');
-            card2.classList.remove('flipped');
+            console.log("Reached maximum number of pairs");
         }
+    }
 
+    function resetBoard(totalPairs) {
+        const gameBoard = document.getElementById('game-board');
+        gameBoard.innerHTML = "";
+
+        cards = [];
         flippedCards = [];
+        matchedPairs = 0;
         isFlipping = false;
+
+        // Update the points and display
+        points = 0;
+        pointsTracker.innerHTML = "Points:" + points;
+
+        createBoard(totalPairs);
+        countdown(1)
     }
 
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-
-    returnButton.onclick = function(){
-        console.log("Testar")
-    }
-    function countdown(minutes) {
-        var seconds = 60;
-        var mins = minutes;
-
-        function tick() {
-            var counter = document.getElementById("counter");
-            var current_minutes = mins - 1;
-
-            if (seconds > 0) {
-                seconds--;
-            } else {
-                alert('Fail');
-                return;
-            }
-            if (matchedPairs === symbols.length && seconds > 0) {
-                modal.style.display = "block"
-                return
-            }
-
-            counter.innerHTML = "Timer:" + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-            setTimeout(tick, 1000);
-        }
-
-        tick();
-    }
-
-    createBoard();
+    createBoard(totalPairs);
 });
