@@ -1,7 +1,6 @@
 var currentTotalPairs;
 document.addEventListener('DOMContentLoaded', function () {
     const symbols = ['🌟', '🌈', '🍕', '🚀', '🎈', '🍦'];
-    //, '🐳', '🎉', '🍦'
     const totalPairs = symbols.length * 2;
     let cards = [];
     let flippedCards = [];
@@ -45,29 +44,30 @@ document.addEventListener('DOMContentLoaded', function () {
     function countdown(minutes) {
         var seconds = 60;
         var mins = minutes;
-
+    
         function tick() {
             var counter = document.getElementById("counter");
             var current_minutes = mins - 1;
-
+    
             if (seconds > 0) {
                 seconds--;
             } else {
                 alert('Fail');
                 return;
             }
-            if (matchedPairs === symbols.length && seconds > 0) {
-                modal.style.display = "block"
-                return
+    
+            if (matchedPairs === totalPairs / 2 && seconds > 0 && !isFlipping) {
+                modal.style.display = "block";
+                return;
             }
-
+    
             counter.innerHTML = "Timer:" + current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
             setTimeout(tick, 1000);
         }
-
+    
         tick();
     }
-
+    
     function flipCard() {
         if (!isFlipping && flippedCards.length < 2 && !this.classList.contains('flipped')) {
             this.classList.add('flipped');
@@ -124,17 +124,50 @@ document.addEventListener('DOMContentLoaded', function () {
     function resetBoard(totalPairs) {
         const gameBoard = document.getElementById('game-board');
         gameBoard.innerHTML = "";
-
+    
         cards = [];
         flippedCards = [];
         matchedPairs = 0;
         isFlipping = false;
-        modal.style.display = "none"
+        modal.style.display = "none";
+    
         // Update the points and display
         pointsTracker.innerHTML = "Points:" + points;
-        createBoard(totalPairs);
-        countdown(1)
+    
+        // Get the original symbols that were used in the game
+        const originalSymbols = symbols.slice(0, totalPairs / 2);
+    
+        // Shuffle the original symbols
+        const shuffledSymbols = shuffleArray([...originalSymbols, ...originalSymbols]);
+    
+        // Create pairs of symbols for the new cards
+        const newCardSymbols = [];
+        for (let i = 0; i < totalPairs / 2; i++) {
+            newCardSymbols.push(shuffledSymbols[i], shuffledSymbols[i]);
+        }
+    
+        // Shuffle the symbols for the new cards
+        const mixedSymbols = shuffleArray(newCardSymbols);
+    
+        for (let i = 0; i < totalPairs; i++) {
+            const card = document.createElement('div');
+            card.classList.add('card');
+    
+            const symbol = document.createElement('div');
+            symbol.classList.add('symbol');
+    
+            // Assign a symbol to the card
+            symbol.textContent = mixedSymbols[i];
+    
+            card.appendChild(symbol);
+    
+            card.addEventListener('click', flipCard);
+            gameBoard.appendChild(card);
+            cards.push(card);
+        }
+    
+        countdown(1);
     }
-
+    
     createBoard(totalPairs);
 });
