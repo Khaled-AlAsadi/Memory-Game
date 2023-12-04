@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Fail');
                 return;
             }
-            matchedPairs = symbols.length
             if (matchedPairs === symbols.length && seconds > 0) {
                 modal.style.display = "block"
                 return
@@ -117,8 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
             currentTotalPairs += 2;
 
             resetBoard(currentTotalPairs);
-            modal.style.display = 'hidden'
-            countdown(1)
         } else {
             console.log("Reached maximum number of pairs");
         }
@@ -132,11 +129,9 @@ document.addEventListener('DOMContentLoaded', function () {
         flippedCards = [];
         matchedPairs = 0;
         isFlipping = false;
-
+        modal.style.display = "none"
         // Update the points and display
-        points = 0;
         pointsTracker.innerHTML = "Points:" + points;
-
         createBoard(totalPairs);
         countdown(1)
     }
