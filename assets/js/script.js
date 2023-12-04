@@ -1,6 +1,7 @@
 var currentTotalPairs;
 document.addEventListener('DOMContentLoaded', function () {
-    const symbols = ['🌟', '🌈', '🍕', '🚀', '🎈', '🐳', '🎉', '🍦'];
+    const symbols = ['🌟', '🌈', '🍕', '🚀', '🎈', '🍦'];
+    //, '🐳', '🎉', '🍦'
     const totalPairs = symbols.length * 2;
     let cards = [];
     let flippedCards = [];
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var modal = document.getElementById("myModal");
     var returnButton = document.getElementById("returnButton")
     var nextButton = document.getElementById("nextButton")
-    var maxTotalPairs = 16;
+    var maxTotalPairs = 20;
 
     currentTotalPairs = totalPairs;
 
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Fail');
                 return;
             }
-            // matchedPairs = symbols.length
+            matchedPairs = symbols.length
             if (matchedPairs === symbols.length && seconds > 0) {
                 modal.style.display = "block"
                 return
@@ -116,6 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
             currentTotalPairs += 2;
 
             resetBoard(currentTotalPairs);
+            modal.style.display = 'hidden'
+            countdown(1)
         } else {
             console.log("Reached maximum number of pairs");
         }
