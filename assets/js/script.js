@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
     
-            if (matchedPairs === totalPairs / 2 && seconds > 0 && !isFlipping) {
+            if (matchedPairs === currentTotalPairs  / 2 && seconds > 0 && !isFlipping) {
                 modal.style.display = "block";
                 return;
             }
