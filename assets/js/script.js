@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var returnButton = document.getElementById("returnButton")
     var nextButton = document.getElementById("nextButton")
     var maxTotalPairs = 20;
+    var currentLevel = 1;
+    var levelElement = document.getElementById("level");
+    levelElement.innerHTML = "Level: " + currentLevel;
 
     currentTotalPairs = totalPairs;
 
@@ -39,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         flippedCards = [];
         isFlipping = false;
+    }
+
+    // Add the level display update function
+    function updateLevelDisplay() {
+            var levelElement = document.getElementById("level");
+            levelElement.innerHTML = "Level: " + currentLevel;
+        }
+
+        // Add a function to increase the level
+    function increaseLevel() {
+            currentLevel++;
+            updateLevelDisplay();
     }
 
     function countdown(minutes) {
@@ -114,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nextButton.onclick = function () {
         if (currentTotalPairs < maxTotalPairs) {
             currentTotalPairs += 2;
-
+            increaseLevel()
             resetBoard(currentTotalPairs);
         } else {
             console.log("Reached maximum number of pairs");
