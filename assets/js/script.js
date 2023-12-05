@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var nextButton = document.getElementById("nextButton")
     var maxTotalPairs = 20;
     var currentLevel = 1;
+    var maxLevels = 5;
     var levelElement = document.getElementById("level");
     levelElement.innerHTML = "Level: " + currentLevel;
 
@@ -145,7 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
         matchedPairs = 0;
         isFlipping = false;
         modal.style.display = "none";
-    
+        if (currentLevel === maxLevels) {
+            nextButton.style.display = "none";
+        }
         // Update the points and display
         pointsTracker.innerHTML = "Points:" + points;
     
