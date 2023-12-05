@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentLevel = 1;
     var maxLevels = 5;
     var levelElement = document.getElementById("level");
+    var modalText = document.getElementById("modalText");
+
     levelElement.innerHTML = "Level: " + currentLevel;
 
     currentTotalPairs = totalPairs;
@@ -68,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (seconds > 0) {
                 seconds--;
             } else {
-                alert('Fail');
+                modalText.innerHTML = "Fail";
+                nextButton.style.display='none'
+                modal.style.display = "block";
                 return;
             }
     
