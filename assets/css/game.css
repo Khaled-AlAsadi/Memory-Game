@@ -9,17 +9,17 @@ body {
 }
 
 .card {
-    width: 100px;
-    height: 100px;
-    background-color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    font-family: 'Noto Color Emoji', 'Segoe UI Emoji', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    overflow: hidden;
+  width: 100px;
+  height: 100px;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  font-family: 'Noto Color Emoji', 'Segoe UI Emoji', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
 }
 
 .card .symbol {
