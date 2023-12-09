@@ -1,0 +1,39 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+}
+
+section {
+    max-width: 600px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 16px;
+    color: #333;
+}
