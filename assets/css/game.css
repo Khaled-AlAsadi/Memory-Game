@@ -10,6 +10,18 @@ body {
     margin-bottom: 20px;
 
 }
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 20px;
+}
+#returnToMenuButton a{
+  text-decoration: none;
+}
+
 .header{
   justify-content: center;
   display: flex;
@@ -36,7 +48,7 @@ body {
 }
 
 .card .symbol {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .card.flipped .symbol {
