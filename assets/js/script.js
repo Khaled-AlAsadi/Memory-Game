@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentLevel = 1;
     var maxLevels = 5;
     var levelElement = document.getElementById("level");
+    var rubric = document.getElementById("rubric");
     var modalText = document.getElementById("modalText");
 
     levelElement.innerHTML = "Level: " + currentLevel;
@@ -66,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
         function tick() {
             var counter = document.getElementById("counter");
             var current_minutes = mins - 1;
-    
             if (seconds > 0) {
                 seconds--;
             } else {
-                modalText.innerHTML = "Fail";
+                rubric.innerHTML = "Fail";
                 nextButton.style.display='none'
+                modalText.innerHTML = "You failed level " + currentLevel + " with " + points + " points" 
                 modal.style.display = "block";
                 return;
             }
