@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var counter = document.getElementById("counter");
             var current_minutes = mins - 1;
             if (seconds > 0) {
-                seconds--;
+                //seconds--;
             } else {
                 rubric.innerHTML = "Fail";
                 nextButton.style.display='none'
@@ -79,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
             if (matchedPairs === currentTotalPairs  / 2 && seconds > 0 && !isFlipping) {
                 modal.style.display = "block";
+                rubric.innerHTML = "congratulations";
+                modalText.innerHTML = "You completed level " + currentLevel + " with " + points + " points" + " You get 20 points as a bonus for completing the level"
+                points = points + 20 
                 return;
             }
     
