@@ -7,9 +7,13 @@ body {
     grid-template-columns: repeat(4, 100px);
     gap: 10px;
     justify-content: center;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
-
+.trackers{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
 .card {
   width: 100px;
   height: 100px;
