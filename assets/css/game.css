@@ -6,6 +6,8 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .card {
@@ -77,4 +79,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 800px) {
+  #game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(33.33% - 10px);
+    max-width: 150px;
+  }
 }
