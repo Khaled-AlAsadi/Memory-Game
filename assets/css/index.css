@@ -8,7 +8,7 @@ body {
   justify-content: center;
 }
 
-h1 {
+section h1 {
   color: #333;
 }
 
@@ -22,6 +22,7 @@ section {
   height: 50vh;
   font-family: 'Arial', sans-serif;
   width: 100%;
+  margin-top: 20px;
 }
 
 button {
@@ -49,14 +50,4 @@ button:hover {
   flex-direction: column;
   width: 100%;
   padding: 20px auto;
-}
-
-a {
-  display: flex;
-  width: 100%;
-  color: #35365d;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
 }
