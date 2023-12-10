@@ -4,20 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap">
     <title>Memory Game</title>
 </head>
 
 <body>
-    <h1>Memory Game Menu</h1>
     <section>
+        <h1>Memory Game Menu</h1>
         <div class="button-container">
-        <button><a href="game.html">Start Game</a></button>
-        <button><a href="rules.html">Rules</a></button>
+        <button onclick="startGame()">Start Game</button>
+        <button onclick="viewRules()">Rules</button>
         </div>
     </section>
+    <script>
+        function startGame() {
+            window.location.href = "game.html";
+        }
+
+        function viewRules() {
+            window.location.href = "rules.html";
+        }
+    </script>
 </body>
 
 </html>

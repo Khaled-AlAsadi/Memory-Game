@@ -12,30 +12,35 @@
 
 <body>
     <div class="container">
-    <div class="header">
-        <h1 id="level">
-        </h1>
-    </div>
-    <button id="returnToMenuButton"><a href="index.html"> Return to menu </a></button>
-    <div class="trackers">
-        <span id="counter"></span>
-        <span id="points"></span>
-    </div>
-    <div id="game-board"></div>
-    <script src="assets/js/script.js"></script>
-    <button id="returnToMenuButton"><a href="index.html"> Return to menu </a></button>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <h2 id="rubric"></h2>
-            <p id="modalText">Some text in the Modal..</p>
-            <div class="button-container">
-                <button id="nextButton">Next</button>
-                <button id="returnButton"><a href="index.html"> Return to menu</a></button>
+        <div class="header">
+            <h1 id="level">
+            </h1>
+        </div>
+        <button id="returnToMenuButton" onclick="returnToMenu()">Return to menu</button>
+        <div class="trackers">
+            <span id="counter"></span>
+            <span id="points"></span>
+        </div>
+        <div id="game-board"></div>
+        <button id="returnToMenuButton" onclick="returnToMenu()"> Return to menu</button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h2 id="rubric"></h2>
+                <p id="modalText">Some text in the Modal..</p>
+                <div class="button-container">
+                    <button id="nextButton">Next</button>
+                    <button id="returnButton" onclick="returnToMenu()">Return to menu</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <script src="assets/js/script.js"></script>
+    <script>
+        function returnToMenu() {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>
