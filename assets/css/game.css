@@ -9,6 +9,12 @@ body {
     justify-content: center;
     /*margin-top: 50px;*/
 }
+.header{
+  justify-content: center;
+  display: flex;
+  gap: 50px;
+}
+
 .trackers{
   display: flex;
   gap: 10px;
