@@ -2,31 +2,37 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set, viewport, author, description, and keywords -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="Khaled Al Asadi">
+    <meta name="description" content="Test your memory by playing the game ">
+    <meta name="keywords" content="Memory Game, Matching pairs, fun">
+    <!-- Links to CSS stylesheets -->
     <link rel="stylesheet" href="assets/css/game.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap">
-    <title>Memory Game</title>
-</head>
+    <title>Memory Game | Game</title>
+  </head>
 
 <body>
     <div class="container">
         <div class="header">
             <h1 id="level">
+                .
             </h1>
         </div>
-        <button id="returnToMenuButton" onclick="returnToMenu()">Return to menu</button>
+        <button class="returnToMenuButton" onclick="returnToMenu()">Return to menu</button>
         <div class="trackers">
             <span id="counter"></span>
             <span id="points"></span>
         </div>
         <div id="game-board"></div>
-        <button id="returnToMenuButton" onclick="returnToMenu()"> Return to menu</button>
+        <button class="returnToMenuButton" onclick="returnToMenu()"> Return to menu</button>
         <!-- The Modal -->
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <h2 id="rubric"></h2>
+                <h2 id="rubric">.</h2>
                 <p id="modalText">Some text in the Modal..</p>
                 <div class="button-container">
                     <button id="nextButton">Next</button>
