@@ -49,5 +49,5 @@ button:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px auto;
+  padding: 20px;
 }
