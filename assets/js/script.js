@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var counter = document.getElementById("counter");
             var current_minutes = mins - 1;
             if (seconds > 0) {
-                //seconds--;
+                seconds--;
             } else {
                 rubric.innerHTML = "Fail";
                 nextButton.style.display='none'
