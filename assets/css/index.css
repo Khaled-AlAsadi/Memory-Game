@@ -1,5 +1,8 @@
 body {
-  background-color: #f0f0f0;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  background-image: url('../images/laddaned.jfif');
+  /*https://www.freepik.com/free-photos-vectors/calm-colors*/
+  background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,7 +12,11 @@ body {
 }
 
 section h1 {
-  color: #333;
+  color: #3498db;
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -22,7 +29,7 @@ section {
   height: 50vh;
   font-family: 'Arial', sans-serif;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 button {
@@ -37,12 +44,14 @@ button {
   width: 100%;
   box-sizing: border-box;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
   background-color: #2980b9;
+  transform: scale(1.05);
 }
 
 .button-container {
@@ -50,4 +59,5 @@ button:hover {
   flex-direction: column;
   width: 100%;
   padding: 20px;
+  border-radius: 10px;
 }
