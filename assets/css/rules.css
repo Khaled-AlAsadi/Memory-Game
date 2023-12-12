@@ -8,18 +8,50 @@ body {
   justify-content: center;
 }
 
-h1 {
-  color: #333;
+section h1 {
+  color: #3498db;
+  font-size: 2em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.rules-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+.rules-container ul li{
+  background-color: #3498db;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rules-container ul{
+list-style-type: none;
 }
 
 section {
-  max-width: 600px;
-  text-align: left;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  margin-top: 50px;
 }
 
 p {
@@ -27,17 +59,12 @@ p {
   color: #555;
 }
 
-ol {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
 li {
   font-size: 16px;
   color: #333;
 }
 
-#returnToMenuButton {
+.returnToMenuButton {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -52,11 +79,11 @@ li {
   transition: background-color 0.3s;
 }
 
-#returnToMenuButton:hover {
+.returnToMenuButton:hover {
   background-color: #45a049;
 }
 
-#returnToMenuButton a {
+.returnToMenuButton a {
   color: inherit;
   text-decoration: none;
   display: block;
