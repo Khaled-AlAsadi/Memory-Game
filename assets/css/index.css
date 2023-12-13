@@ -1,8 +1,5 @@
 body {
   background: linear-gradient(to bottom, #ffffff, #f0f0f0);
-  background-image: url('../images/laddaned.jfif');
-  /*https://www.freepik.com/free-photos-vectors/calm-colors*/
-  background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
