@@ -1,3 +1,8 @@
+/* jshint esversion: 8 */
+/*jslint browser:true */
+/*global document: false */
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
   const allSymbolArrays = [
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦"],
@@ -13,16 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let matchedPairs = 0;
   let isFlipping = false;
   let points = 0;
-  var pointsTracker = document.getElementById("points");
-  var modal = document.getElementById("myModal");
-  var returnButton = document.getElementById("returnButton");
-  var nextButton = document.getElementById("nextButton");
-  var maxTotalPairs = 20;
-  var currentLevel = 1;
-  var maxLevels = 5;
-  var levelElement = document.getElementById("level");
-  var rubric = document.getElementById("rubric");
-  var modalText = document.getElementById("modalText");
+  const pointsTracker = document.getElementById("points");
+  const modal = document.getElementById("myModal");
+  const nextButton = document.getElementById("nextButton");
+  const maxTotalPairs = 20;
+  let currentLevel = 1;
+  const maxLevels = 5;
+  const levelElement = document.getElementById("level");
+  const rubric = document.getElementById("rubric");
+  const modalText = document.getElementById("modalText");
 
   levelElement.innerHTML = "Level: " + currentLevel;
 
@@ -64,10 +68,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let mins = minutes;
 
     function tick() {
-      var counter = document.getElementById("counter");
-      var current_minutes = mins - 1;
+      const counter = document.getElementById("counter");
+      const current_minutes = mins - 1;
       if (seconds > 0) {
-        // seconds--;
+        seconds--;
       } else {
         rubric.innerHTML = "Fail";
         nextButton.style.display = "none";
@@ -90,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
           " with " +
           points +
           " points" +
-          " You get 20 points as a bonus for completing the level";
+          " You got 20 points as a bonus for completing level" +
+          currentLevel;
         points = points + 20;
         return;
       }
