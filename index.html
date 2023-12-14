@@ -19,19 +19,11 @@
     <section>
         <h1>Memory Game Menu</h1>
         <div class="button-container">
-        <button aria-label="Start game button" onclick="startGame()">Start Game</button>
-        <button aria-label="Go to rules page to view the rules" onclick="viewRules()">Rules</button>
+        <button id="startGame" onclick="startGame()">Start Game</button>
+        <button id="rulesButton" onclick="viewRules()">Rules</button>
         </div>
     </section>
-    <script>
-        function startGame() {
-            window.location.href = "game.html";
-        }
-
-        function viewRules() {
-            window.location.href = "rules.html";
-        }
-    </script>
+    <script src="./assets/js/onclick.js"></script>
 </body>
 
 </html>
