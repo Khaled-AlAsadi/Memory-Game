@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   pointsTracker.innerHTML = "Points:" + points;
 
-  const checkMatch=function() {
+  const checkMatch = function () {
     const [card1, card2] = flippedCards;
     const symbol1 = card1.querySelector(".symbol").textContent;
     const symbol2 = card2.querySelector(".symbol").textContent;
@@ -54,18 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     flippedCards = [];
     isFlipping = false;
-  }
+  };
 
-  const updateLevelDisplay=function() {
+  const updateLevelDisplay = function () {
     levelElement.innerHTML = "Level: " + currentLevel;
-  }
+  };
 
-  const increaseLevel=function() {
+  const increaseLevel = function () {
     currentLevel++;
     updateLevelDisplay();
-  }
+  };
 
-  const countdown=function(minutes) {
+  const countdown = function (minutes) {
     let seconds = 60;
     let mins = minutes;
 
@@ -95,10 +95,20 @@ document.addEventListener("DOMContentLoaded", function () {
           " with " +
           points +
           " points" +
-          " You got 20 points as a bonus for completing level" +
+          " You got 20 points as a bonus for completing level " +
           currentLevel;
         points = points + 20;
         return;
+      }
+      if (currentLevel === maxLevels) {
+        nextButton.style.display = "none";
+        rubric.innerHTML = "congratulations";
+        modalText.innerHTML =
+          "You completed the game with " +
+          points +
+          " points" +
+          " You got 20 points as a bonus for completing level " +
+          currentLevel;
       }
 
       counter.innerHTML =
@@ -111,9 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     tick();
-  }
+  };
 
-  const flipCard = function() {
+  const flipCard = function () {
     if (
       !isFlipping &&
       flippedCards.length < 2 &&
@@ -127,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(checkMatch, 1000);
       }
     }
-  }
+  };
 
   const shuffleArray = function (array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -173,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  const resetBoard=function(totalPairs) {
+  const resetBoard = function (totalPairs) {
     gameBoard.innerHTML = "";
 
     cards = [];
@@ -183,6 +193,13 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
     if (currentLevel === maxLevels) {
       nextButton.style.display = "none";
+      rubric.innerHTML = "congratulations";
+      modalText.innerHTML =
+        "You completed the game with " +
+        points +
+        " points" +
+        " You got 20 points as a bonus for completing level " +
+        currentLevel;
     }
 
     pointsTracker.innerHTML = "Points:" + points;
@@ -220,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     countdown(1);
-  }
+  };
 
   createBoard(currentTotalPairs);
 });
