@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const levelElement = document.getElementById("level");
   const rubric = document.getElementById("rubric");
   const modalText = document.getElementById("modalText");
+  const counter = document.getElementById("counter");
+  const gameBoard = document.getElementById("game-board");
 
   levelElement.innerHTML = "Level: " + currentLevel;
 
@@ -34,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   pointsTracker.innerHTML = "Points:" + points;
 
-  function checkMatch() {
+  const checkMatch=function() {
     const [card1, card2] = flippedCards;
     const symbol1 = card1.querySelector(".symbol").textContent;
     const symbol2 = card2.querySelector(".symbol").textContent;
@@ -54,21 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
     isFlipping = false;
   }
 
-  function updateLevelDisplay() {
+  const updateLevelDisplay=function() {
     levelElement.innerHTML = "Level: " + currentLevel;
   }
 
-  function increaseLevel() {
+  const increaseLevel=function() {
     currentLevel++;
     updateLevelDisplay();
   }
 
-  function countdown(minutes) {
+  const countdown=function(minutes) {
     let seconds = 60;
     let mins = minutes;
 
     function tick() {
-      const counter = document.getElementById("counter");
       const current_minutes = mins - 1;
       if (seconds > 0) {
         seconds--;
@@ -112,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tick();
   }
 
-  function flipCard() {
+  const flipCard = function() {
     if (
       !isFlipping &&
       flippedCards.length < 2 &&
@@ -137,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const createBoard = function (totalPairs) {
-    const gameBoard = document.getElementById("game-board");
     const symbolIndices = Array.from(
       { length: totalPairs },
       (_, i) => i % allSymbolArrays[currentLevel - 1].length
@@ -173,8 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  function resetBoard(totalPairs) {
-    const gameBoard = document.getElementById("game-board");
+  const resetBoard=function(totalPairs) {
     gameBoard.innerHTML = "";
 
     cards = [];
