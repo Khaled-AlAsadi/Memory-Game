@@ -1,9 +1,8 @@
 /* jshint esversion: 8 */
 /*jslint browser:true */
 /*global document: false */
-"use strict";
-
 document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
   const allSymbolArrays = [
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦"],
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦", "🌺"],
@@ -60,6 +59,25 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   /**
+   * Function to handle the card flipping.
+   */
+  const flipCard = function () {
+    if (
+      !isFlipping &&
+      flippedCards.length < 2 &&
+      !this.classList.contains("flipped")
+    ) {
+      this.classList.add("flipped");
+      flippedCards.push(this);
+
+      if (flippedCards.length === 2) {
+        isFlipping = true;
+        setTimeout(checkMatch, 1000);
+      }
+    }
+  };
+
+  /**
    * Function to update the level display.
    */
   const updateLevelDisplay = function () {
@@ -70,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * Function to increase the current game level.
    */
   const increaseLevel = function () {
-    currentLevel++;
+    currentLevel = currentLevel + 1;
     updateLevelDisplay();
   };
   /**
@@ -82,9 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let mins = minutes;
 
     function tick() {
-      const current_minutes = mins - 1;
+      const currentMinutes = mins - 1;
       if (seconds > 0) {
-        seconds--;
+        seconds = seconds - 1;
       } else {
         rubric.innerHTML = "Fail";
         nextButton.style.display = "none";
@@ -125,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       counter.innerHTML =
         "Timer:" +
-        current_minutes.toString() +
+        currentMinutes.toString() +
         ":" +
         (seconds < 10 ? "0" : "") +
         String(seconds);
@@ -133,25 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     tick();
-  };
-
-  /**
-   * Function to handle the card flipping.
-   */
-  const flipCard = function () {
-    if (
-      !isFlipping &&
-      flippedCards.length < 2 &&
-      !this.classList.contains("flipped")
-    ) {
-      this.classList.add("flipped");
-      flippedCards.push(this);
-
-      if (flippedCards.length === 2) {
-        isFlipping = true;
-        setTimeout(checkMatch, 1000);
-      }
-    }
   };
 
   /**
@@ -205,8 +204,6 @@ document.addEventListener("DOMContentLoaded", function () {
       currentTotalPairs += 2;
       increaseLevel();
       resetBoard(currentTotalPairs);
-    } else {
-      console.log("Reached maximum number of pairs");
     }
   };
 
