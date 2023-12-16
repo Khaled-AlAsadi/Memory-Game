@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   pointsTracker.innerHTML = "Points:" + points;
 
+  /**
+   * Function to check if two flipped cards match.
+   */
   const checkMatch = function () {
     const [card1, card2] = flippedCards;
     const symbol1 = card1.querySelector(".symbol").textContent;
@@ -56,15 +59,24 @@ document.addEventListener("DOMContentLoaded", function () {
     isFlipping = false;
   };
 
+  /**
+   * Function to update the level display.
+   */
   const updateLevelDisplay = function () {
     levelElement.innerHTML = "Level: " + currentLevel;
   };
 
+  /**
+   * Function to increase the current game level.
+   */
   const increaseLevel = function () {
     currentLevel++;
     updateLevelDisplay();
   };
-
+  /**
+   * Function to start a countdown timer for the game.
+   * @param {number} minutes - The duration of the countdown in minutes.
+   */
   const countdown = function (minutes) {
     let seconds = 60;
     let mins = minutes;
@@ -123,6 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
     tick();
   };
 
+  /**
+   * Function to handle the card flipping.
+   */
   const flipCard = function () {
     if (
       !isFlipping &&
@@ -139,6 +154,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  /**
+   * Function to shuffle an array.
+   * @param {Array} array - The array to be shuffled.
+   * @returns {Array} - The shuffled array.
+   */
   const shuffleArray = function (array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -147,6 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return array;
   };
 
+  /**
+   * Function to create the game board with a specified number of card pairs.
+   * @param {number} totalPairs - The total number of card pairs in the game.
+   */
   const createBoard = function (totalPairs) {
     const symbolIndices = Array.from(
       { length: totalPairs },
@@ -173,6 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
     countdown(1);
   };
 
+  /**
+   * Event handler for the "Next Level" button.
+   */
   nextButton.onclick = function () {
     if (currentTotalPairs < maxTotalPairs) {
       currentTotalPairs += 2;
@@ -183,6 +210,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  /**
+   * Function to reset the game board with a specified number of card pairs.
+   * @param {number} totalPairs - The total number of card pairs in the game.
+   */
   const resetBoard = function (totalPairs) {
     gameBoard.innerHTML = "";
 
@@ -215,7 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ...originalSymbols,
       ...originalSymbols,
     ]);
-
     // Shuffle the symbols for the new cards
     const mixedSymbols = shuffleArray(shuffledSymbols);
 
