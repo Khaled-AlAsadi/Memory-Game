@@ -7,6 +7,7 @@ background: linear-gradient(90deg, rgba(1,1,27,1) 0%, rgba(2,51,101,1) 100%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /*#01011b, #023365*/
 }
 
 section h1 {
@@ -23,7 +24,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   height: 50vh;
   font-family: 'Arial', sans-serif;
   width: 100%;
