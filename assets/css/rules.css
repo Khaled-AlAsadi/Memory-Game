@@ -88,15 +88,16 @@ li {
   background-color: #031825;
 }
 
-/*Footer*/
+/* Footer */
 
 footer {
   background-color: #000407;
   color: white;
-  position: absolute;
+  position: fixed;
   text-align: center;
   bottom: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 footer a {
@@ -110,5 +111,5 @@ footer a i {
 }
 
 footer a i:hover {
-  color:  #f0f0f0;
+  color: #f0f0f0;
 }
