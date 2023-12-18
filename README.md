@@ -14,7 +14,7 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
 
 * As a First Time Visitor, I want to easily understand the main purpose of the app, so I can learn more about this app.
 * As a first-time visitor, I want to explore the features and interface of Memory-Master to understand how the game works.
-* As a newcomer, I want to be able to start playing the game quickly without feeling overwhelmed by complex instructions.
+* As a first-time visito, I want to be able to start playing the game quickly without feeling overwhelmed by complex instructions.
 
 ### Returning VisitorGoals:
 
