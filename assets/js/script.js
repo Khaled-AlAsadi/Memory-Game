@@ -1,8 +1,5 @@
 /* jshint esversion: 8 */
-/*jslint browser:true */
-/*global document: false */
 document.addEventListener("DOMContentLoaded", function () {
-  "use strict";
   const allSymbolArrays = [
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦"],
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦", "🌺"],
@@ -99,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let seconds = 60;
     let mins = minutes;
 
-    function tick() {
+    const tick = function () {
       const currentMinutes = mins - 1;
       if (seconds > 0) {
         seconds = seconds - 1;
@@ -148,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (seconds < 10 ? "0" : "") +
         String(seconds);
       setTimeout(tick, 1000);
-    }
+    };
 
     tick();
   };
