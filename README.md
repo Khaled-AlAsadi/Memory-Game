@@ -92,21 +92,9 @@ Deep Dark Blue was used for the background.
 ---
 
 ### Bugs
-+ **Solved bugs**
-
-
-```js
-
-```
-
 + **Unsolved bugs**
 
     - None.
-
----
-
-+ **Mistakes**
-
 
 ---
 ## Testing
@@ -157,7 +145,9 @@ In your IDE Terminal, type the following command to clone my repository:
 ### Mobile devices
 
 ![Menu Page. Mobile Screen](documentation/wireframes/index-mobile.png)
+
 ![Game Page. Mobile Screen](documentation/wireframes/game-mobile.png)
+
 ![Rules Page. Mobile Screen](documentation/wireframes/rules-mobile.png)
 
 ### Tablet devices
