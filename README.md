@@ -32,12 +32,12 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
 
     - Menu page has 2 main buttons:
 
-        1. Start Game Button leads to the page where the user can play the game;
+        1. Start Game Button leads to the page where the user can play the game.
 
-        2. Rules Button leads to the page where the user can learn the rules before playing;
+        2. Rules Button leads to the page where the user can learn the rules before playing.
 
 
-    - It also has a footer at the bottom with social media icons;
+    - It also has a footer at the bottom with social media icons.
 
     ![Menu Page](documentation/compatibility/chrome_menu_page.png)
 ​
@@ -45,8 +45,8 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
 
 + ### Rules Page
 
-    - It has a button which leads to the menu page;
-    - It has a set of rules that explains the game;
+    - It has a button which leads to the menu page.
+    - It has a set of rules that explains the game.
 
     ![Rules Page](documentation/compatibility/chrome_rules_page.png)
 
@@ -55,11 +55,11 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
 
 + ### Game Page
 
-    - It has a button which leads to the menu page;
-    - It has a a level at the top that shows which level the player is currently on;
-    - It has a point tracker that registers the points for each matching pair and each level;
-    - It has a timer that counts down a minute;
-    - It has a modal that shows up on completing or failing the level;
+    - It has a button which leads to the menu page.
+    - It has a a level at the top that shows which level the player is currently on.
+    - It has a point tracker that registers the points for each matching pair and each level.
+    - It has a timer that counts down a minute.
+    - It has a modal that shows up on completing or failing the level.
 
     ![Game Page](documentation/compatibility/chrome_game_page.png)
 
@@ -137,19 +137,6 @@ In your IDE Terminal, type the following command to clone my repository:
 
 ---
 
-## Credits
-
-
-
-+ #### Media
-
----
-
-## Acknowledgements
-
-
----
-
 ## Wireframes
 
 ### Mobile devices
@@ -163,11 +150,15 @@ In your IDE Terminal, type the following command to clone my repository:
 ### Tablet devices
 
 [Menu Page. Tablet Screen](documentation/wireframes/index-tablet.png)
+
 [Game Page. Tablet Screen](documentation/wireframes/game-tablet.png)
+
 [Rules Page. Tablet Screen](documentation/wireframes/rules-tablet.png)
 
 ### Desktop devices
 
 [Menu Page. Desktop Screen](documentation/wireframes/index-desktop.png)
+
 [Game Page. Desktop Screen](documentation/wireframes/game-desktop.png)
+
 [Rules Page. Desktop Screen](documentation/wireframes/rules-desktop.png)
