@@ -103,7 +103,7 @@ light blue was used for the buttons.
 ### Bugs
 + **Solved bugs**
 
-1. When running the performance testing for the website i got lower points for the accebility and i needed to add a shadow for the text in the buttons
+1. When running the performance testing for the website i got lower points for the accebility because of the contrast and i needed to add a shadow for the text in the buttons.
 
 + **Unsolved bugs**
 
@@ -153,20 +153,20 @@ In your IDE Terminal, type the following command to clone my repository:
 
 ### Mobile devices
 
-![Menu Page. Mobile Screen](documentation/wireframes/index-mobile.png)
+[Menu Page. Mobile Screen](documentation/wireframes/index-mobile.png)
 
-![Game Page. Mobile Screen](documentation/wireframes/game-mobile.png)
+[Game Page. Mobile Screen](documentation/wireframes/game-mobile.png)
 
-![Rules Page. Mobile Screen](documentation/wireframes/rules-mobile.png)
+[Rules Page. Mobile Screen](documentation/wireframes/rules-mobile.png)
 
 ### Tablet devices
 
-![Menu Page. Tablet Screen](documentation/wireframes/index-tablet.png)
-![Game Page. Tablet Screen](documentation/wireframes/game-tablet.png)
-![Rules Page. Tablet Screen](documentation/wireframes/rules-tablet.png)
+[Menu Page. Tablet Screen](documentation/wireframes/index-tablet.png)
+[Game Page. Tablet Screen](documentation/wireframes/game-tablet.png)
+[Rules Page. Tablet Screen](documentation/wireframes/rules-tablet.png)
 
 ### Desktop devices
 
-![Menu Page. Desktop Screen](documentation/wireframes/index-desktop.png)
-![Game Page. Desktop Screen](documentation/wireframes/game-desktop.png)
-![Rules Page. Desktop Screen](documentation/wireframes/rules-desktop.png)
+[Menu Page. Desktop Screen](documentation/wireframes/index-desktop.png)
+[Game Page. Desktop Screen](documentation/wireframes/game-desktop.png)
+[Rules Page. Desktop Screen](documentation/wireframes/rules-desktop.png)
