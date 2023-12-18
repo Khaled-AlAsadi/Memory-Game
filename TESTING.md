@@ -147,6 +147,8 @@
       - Function:
 
           ![JSHint Validator Grammar Quiz JS](documentation/validators_testing/function_js.png)
+          
+          - I decided to have a different javascript file where i only define the functions for the navigation. In the picture it says that the functions are not being used but i use them in the html files
 
 ## Accessibility and performance
 
