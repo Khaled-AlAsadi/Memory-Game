@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const pointsTracker = document.getElementById("points");
   const modal = document.getElementById("my-modal");
-  const nextButton = document.getElementById("nextButton");
+  const nextButton = document.getElementById("next-button");
   const maxTotalPairs = 20;
   const maxLevels = 5;
   const levelElement = document.getElementById("level");

@@ -118,7 +118,7 @@ body {
   max-width: 500px;
 }
 
-#nextButton {
+#next-button {
   width: 100%;
   max-width: 500px;
   background-color: #4CAF50;
@@ -136,7 +136,7 @@ body {
   transition: background-color 0.3s;
 }
 
-#returnButton {
+#return-button {
   background-color: transparent;
   color: red;
   display: flex;
