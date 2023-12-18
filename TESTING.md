@@ -132,7 +132,7 @@
 | Game Page | | | | | |
 | Return to menu | Click on Return to menu button | The user is redirected to the menu page | Yes | Yes | - |
 | Game Board | Click on card  | The card flips and shows the symbol | Yes | Yes | - |
-| Matching pair of cards | Click on cards until a match between cards happen  | The points tracker adds 20 points | Yes | Yes | - |
+| Points Tracker | Click on cards until a match between cards happen  | The points tracker adds 20 points | Yes | Yes | - |
 | Timer | The user redirects to the game page  | The counter starts counting down | Yes | Yes | - |
 | Footer | | | | | |
 | LinkedIn icon in the footer | Click on the LinkedIn icon | The user is redirected to the LinkedIn page | Yes | Yes | - |
