@@ -19,6 +19,7 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
 ### Returning VisitorGoals:
 
 * As a Returning Visitor, I want to refresh my memory by playing more.
+* As a Returning Visitor, I want to have fun playing the game.
 
 ## Features
 
