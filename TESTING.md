@@ -119,6 +119,28 @@
 + The functionality of the links in the app was checked as well by different users.
 
 ---
+
+## Manual testing
+
+| feature | action | expected result | tested | passed | comments |
+| --- | --- | --- | --- | --- | --- |
+| Menu Page | | | | | |
+| Start Game | Click on Start Game button | The user is redirected to the game page | Yes | Yes | - |
+| Rules | Click on Rules button | The user is redirected to the rules page | Yes | Yes | - |
+| Rules Page | | | | | |
+| Return to menu | Click on Return to menu button | The user is redirected to the menu page | Yes | Yes | - |
+| Game Page | | | | | |
+| Return to menu | Click on Return to menu button | The user is redirected to the menu page | Yes | Yes | - |
+| Game Board | Click on card  | The card flips and shows the symbol | Yes | Yes | - |
+| Matching pair of cards | Click on cards until a match between cards happen  | The points tracker adds 20 points | Yes | Yes | - |
+| Timer | The user redirects to the game page  | The counter starts counting down | Yes | Yes | - |
+| Footer | | | | | |
+| LinkedIn icon in the footer | Click on the LinkedIn icon | The user is redirected to the LinkedIn page | Yes | Yes | - |
+| Facebook icon in the footer | Click on the Facebook icon | The user is redirected to the Facebook page | Yes | Yes | - |
+| Github icon in the footer | Click on the Github icon | The user is redirected to the Github page | Yes | Yes | - |
+
+---
+
 ## Validator testing
 
 + ### HTML
