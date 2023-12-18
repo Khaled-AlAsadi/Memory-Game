@@ -8,28 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
     ["🌟", "🌈", "🍕", "🚀", "🎈", "🍦", "🌺", "🎉", "⭐", "🔥"],
   ];
 
+  const pointsTracker = document.getElementById("points");
+  const modal = document.getElementById("my-modal");
+  const nextButton = document.getElementById("nextButton");
+  const maxTotalPairs = 20;
+  const maxLevels = 5;
+  const levelElement = document.getElementById("level");
+  const rubric = document.getElementById("rubric");
+  const modalText = document.getElementById("modal-text");
+  const counter = document.getElementById("counter");
+  const gameBoard = document.getElementById("game-board");
+
   let currentTotalPairs;
   let cards = [];
   let flippedCards = [];
   let matchedPairs = 0;
   let isFlipping = false;
   let points = 0;
-  const pointsTracker = document.getElementById("points");
-  const modal = document.getElementById("myModal");
-  const nextButton = document.getElementById("nextButton");
-  const maxTotalPairs = 20;
   let currentLevel = 1;
-  const maxLevels = 5;
-  const levelElement = document.getElementById("level");
-  const rubric = document.getElementById("rubric");
-  const modalText = document.getElementById("modalText");
-  const counter = document.getElementById("counter");
-  const gameBoard = document.getElementById("game-board");
 
   levelElement.innerHTML = "Level: " + currentLevel;
-
   currentTotalPairs = allSymbolArrays[currentLevel - 1].length * 2;
-
   pointsTracker.innerHTML = "Points:" + points;
 
   /**
@@ -88,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentLevel = currentLevel + 1;
     updateLevelDisplay();
   };
+
   /**
    * Function to start a countdown timer for the game.
    * @param {number} minutes - The duration of the countdown in minutes.
@@ -152,15 +152,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /**
    * Function to shuffle an array.
-   * @param {Array} array - The array to be shuffled.
-   * @returns {Array} - The shuffled array.
+   * @param {Array} initalArray - The initalArray to be shuffled.
+   * @returns {Array} - The shuffled initalArray.
    */
-  const shuffleArray = function (array) {
+  const shuffleArray = function (initalArray) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      [initalArray[i], initalArray[j]] = [initalArray[j], initalArray[i]];
     }
-    return array;
+    return initalArray;
   };
 
   /**
