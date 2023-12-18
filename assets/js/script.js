@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
    * @returns {Array} - The shuffled initalArray.
    */
   const shuffleArray = function (initalArray) {
-    for (let i = array.length - 1; i > 0; i--) {
+    for (let i = initalArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [initalArray[i], initalArray[j]] = [initalArray[j], initalArray[i]];
     }
