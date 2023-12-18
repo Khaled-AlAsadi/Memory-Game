@@ -89,6 +89,13 @@ The flowchart represent the logic of the application:
 ![Background Color](documentation/design/background_color.png)
 Deep Dark Blue was used for the background.
 
+![Text Color](documentation/design/text_color.png)
+White was used for the background.
+
+![Buttons Color](documentation/design/buttons_color.png)
+light blue was used for the buttons.
+
+
 ---
 
 ### Bugs
