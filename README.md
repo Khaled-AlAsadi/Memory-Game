@@ -82,8 +82,10 @@ The flowchart represent the logic of the application:
 - [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
 - [Git](https://git-scm.com/) was used for the version control of the website.
 - [GitHub](https://github.com/) was used to host the code of the website.
+- [GitHub Pages](https://pages.github.com/) was used to host the website.
 
 ---
+
 ## Design
 
 ![Background Color](documentation/design/background_color.png)
@@ -99,6 +101,10 @@ light blue was used for the buttons.
 ---
 
 ### Bugs
++ **Solved bugs**
+
+1. When running the performance testing for the website i got lower points for the accebility and i needed to add a shadow for the text in the buttons
+
 + **Unsolved bugs**
 
     - None.
