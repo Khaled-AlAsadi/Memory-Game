@@ -11,14 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const pointsTracker = document.getElementById("points");
   const modal = document.getElementById("my-modal");
   const nextButton = document.getElementById("next-button");
-  const maxTotalPairs = 20;
-  const maxLevels = 5;
   const levelElement = document.getElementById("level");
   const rubric = document.getElementById("rubric");
   const modalText = document.getElementById("modal-text");
   const counter = document.getElementById("counter");
   const gameBoard = document.getElementById("game-board");
-
+  const returnButton = document.querySelector(".returnToMenuButton");
+  const confirmationModal = document.getElementById("confirmationModal");
+  const confirmYesButton = document.getElementById("confirmYes");
+  const confirmNoButton = document.getElementById("confirmNo");
+  const returnModalButton = document.getElementById("return-button");
+  const maxTotalPairs = 20;
+  const maxLevels = 5;
+  
   let currentTotalPairs;
   let cards = [];
   let flippedCards = [];
@@ -264,4 +269,20 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   createBoard(currentTotalPairs);
+
+  const returnButtonClick = function () {
+    confirmationModal.style.display = "block";
+  };
+
+  const confirmYesClick = function () {
+    window.location.href = "index.html";
+  };
+
+  const confirmNoClick = function () {
+    confirmationModal.style.display = "none";
+  };
+  returnButton.addEventListener('click', returnButtonClick);
+  returnModalButton.addEventListener('click',returnButtonClick);
+  confirmYesButton.addEventListener('click', confirmYesClick);
+  confirmNoButton.addEventListener('click', confirmNoClick);
 });
