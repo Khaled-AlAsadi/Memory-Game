@@ -270,6 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createBoard(currentTotalPairs);
 
+  /*
   const returnButtonClick = function () {
     confirmationModal.style.display = "block";
   };
@@ -284,5 +285,5 @@ document.addEventListener("DOMContentLoaded", function () {
   returnButton.addEventListener('click', returnButtonClick);
   returnModalButton.addEventListener('click',returnButtonClick);
   confirmYesButton.addEventListener('click', confirmYesClick);
-  confirmNoButton.addEventListener('click', confirmNoClick);
+  confirmNoButton.addEventListener('click', confirmNoClick);*/
 });

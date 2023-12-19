@@ -23,7 +23,7 @@
                 .
             </h1>
         </div>
-        <button class="returnToMenuButton">Return to menu</button>
+        <button class="returnToMenuButton" onclick="returnToMenu()">Return to menu</button>
         <div class="trackers">
             <span id="counter"></span>
             <span id="points"></span>
@@ -36,11 +36,12 @@
                 <p id="modal-text">Some text in the Modal..</p>
                 <div class="button-container">
                     <button id="next-button">Next</button>
-                    <button id="return-button">Return to
+                    <button id="return-button" onclick="returnToMenu()">Return to
                         menu</button>
                 </div>
             </div>
         </div>
+        <!-- The Confirmation Modal -->
         <div class="modal" id="confirmationModal">
             <div class="modalContent">
                 <p>Are you sure you want to return to the menu?</p>
@@ -64,6 +65,7 @@
         </a>
     </footer>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/function.js"></script>
 </body>
 
 </html>
