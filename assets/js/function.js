@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 function viewRules() {
   window.location.href = "rules.html";
 }
