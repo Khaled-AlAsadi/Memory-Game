@@ -183,6 +183,29 @@ h1 {
   max-width: 500px;
 }
 
+.modalContent button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#confirm-yes {
+  background-color: #4CAF50;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#confirm-no {
+  background-color: #f44336;
+  color: #fff;
+}
+
 footer {
   background-color: #000407;
   color: white;
@@ -218,5 +241,13 @@ footer a i:hover {
   .card {
     width: calc(33.33% - 10px);
     max-width: 150px;
+  }
+
+  .modalContent button {
+    width: 100%;
+  }
+
+  #confirm-yes {
+    margin-bottom: 10px;
   }
 }

@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const gameBoard = document.getElementById("game-board");
   const returnButton = document.querySelector(".returnToMenuButton");
   const confirmationModal = document.getElementById("confirmationModal");
-  const confirmYesButton = document.getElementById("confirmYes");
-  const confirmNoButton = document.getElementById("confirmNo");
+  const confirmYesButton = document.getElementById("confirm-yes");
+  const confirmNoButton = document.getElementById("confirm-no");
   const returnModalButton = document.getElementById("return-button");
   const maxTotalPairs = 20;
   const maxLevels = 5;
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createBoard(currentTotalPairs);
 
-  /*
+  
   const returnButtonClick = function () {
     confirmationModal.style.display = "block";
   };
@@ -285,5 +285,5 @@ document.addEventListener("DOMContentLoaded", function () {
   returnButton.addEventListener('click', returnButtonClick);
   returnModalButton.addEventListener('click',returnButtonClick);
   confirmYesButton.addEventListener('click', confirmYesClick);
-  confirmNoButton.addEventListener('click', confirmNoClick);*/
+  confirmNoButton.addEventListener('click', confirmNoClick);
 });
