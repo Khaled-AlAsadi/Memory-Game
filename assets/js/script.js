@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const returnModalButton = document.getElementById("return-button");
   const maxTotalPairs = 20;
   const maxLevels = 5;
-  
+
   let currentTotalPairs;
   let cards = [];
   let flippedCards = [];
@@ -111,6 +111,11 @@ document.addEventListener("DOMContentLoaded", function () {
         modalText.innerHTML =
           "You failed level " + currentLevel + " with " + points + " points";
         modal.style.display = "block";
+        returnModalButton.removeEventListener("click", returnButtonClick);
+        returnModalButton.addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+
         return;
       }
 
@@ -270,7 +275,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createBoard(currentTotalPairs);
 
-  
   const returnButtonClick = function () {
     confirmationModal.style.display = "block";
   };
@@ -282,8 +286,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const confirmNoClick = function () {
     confirmationModal.style.display = "none";
   };
-  returnButton.addEventListener('click', returnButtonClick);
-  returnModalButton.addEventListener('click',returnButtonClick);
-  confirmYesButton.addEventListener('click', confirmYesClick);
-  confirmNoButton.addEventListener('click', confirmNoClick);
+  returnButton.addEventListener("click", returnButtonClick);
+  returnModalButton.addEventListener("click", returnButtonClick);
+  confirmYesButton.addEventListener("click", confirmYesClick);
+  confirmNoButton.addEventListener("click", confirmNoClick);
 });
