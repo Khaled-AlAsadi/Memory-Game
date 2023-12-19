@@ -60,7 +60,7 @@ The site can be accessed by this [link](https://khaled-alasadi.github.io/Memory-
     - It has a point tracker that registers the points for each matching pair and each level.
     - It has a timer that counts down a minute.
     - It has a modal that shows up on completing or failing the level.
-
+    - It has a confirmation modal that shows up upon click on return to menu button
     ![Game Page](documentation/compatibility/chrome_game_page.png)
 
 ---
@@ -84,7 +84,7 @@ The flowchart represent the logic of the application:
 - [Git](https://git-scm.com/) was used for the version control of the website.
 - [GitHub](https://github.com/) was used to host the code of the website.
 - [GitHub Pages](https://pages.github.com/) was used to host the website.
-
+- [cloudconvert](https://cloudconvert.com/) was used to convert to gifs.
 ---
 
 ## Design

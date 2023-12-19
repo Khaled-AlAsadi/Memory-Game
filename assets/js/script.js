@@ -275,17 +275,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   createBoard(currentTotalPairs);
 
+  /**
+   * Funtion that shows the confirmation modal
+   */
   const returnButtonClick = function () {
     confirmationModal.style.display = "block";
   };
 
+  /**
+   * Funtion to naviagte to menu page
+   */
   const confirmYesClick = function () {
     window.location.href = "index.html";
   };
 
+  /**
+   * Funtion to close the modal
+   */
   const confirmNoClick = function () {
     confirmationModal.style.display = "none";
   };
+
   returnButton.addEventListener("click", returnButtonClick);
   returnModalButton.addEventListener("click", returnButtonClick);
   confirmYesButton.addEventListener("click", confirmYesClick);
