@@ -104,7 +104,7 @@ light blue was used for the buttons.
 ### Bugs
 + **Solved bugs**
 
-1. When running the performance testing for the website i got lower points for the accebility because of the contrast and i needed to add a shadow for the text in the buttons.
+1. When running the performance testing for the website i got lower points for the accessibility because of the contrast and i needed to add a shadow for the text in the buttons.
 
 + **Unsolved bugs**
 

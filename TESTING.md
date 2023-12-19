@@ -115,9 +115,6 @@
 
       ![Desktop 1920x1200](documentation/responsiveness/desktop_1920_1200.gif)
 
-
-+ The functionality of the links in the app was checked as well by different users.
-
 ---
 
 ## Manual testing
@@ -130,7 +127,9 @@
 | Rules Page | | | | | |
 | Return to menu | Click on Return to menu button | The user is redirected to the menu page | Yes | Yes | - |
 | Game Page | | | | | |
-| Return to menu | Click on Return to menu button | The user is redirected to the menu page | Yes | Yes | - |
+| Return to menu | Click on Return to menu button | The cofnirmation modal shows up | Yes | Yes | - |
+| Confirmation Modal | Click on Yes | The user is redirected to the menu page | Yes | Yes | - |
+| Confirmation Modal | Click on No | The modal closes | Yes | Yes | - |
 | Game Board | Click on card  | The card flips and shows the symbol | Yes | Yes | - |
 | Points Tracker | Click on cards until a match between cards happen  | The points tracker adds 20 points | Yes | Yes | - |
 | Timer | The user redirects to the game page  | The counter starts counting down | Yes | Yes | - |
