@@ -136,6 +136,15 @@ In your IDE Terminal, type the following command to clone my repository:
 - `git clone https://github.com/Khaled-AlAsadi/Memory-Master.git`
 
 ---
+## Credits
+
++ #### Special Thanks
+
+    [Julia Konovalova](https://github.com/IuliiaKonovalova)
+
+    I am thankful to my mentor Julia Konovalova for her guidance and valuable advice!
+
+---
 
 ## Wireframes
 
